@@ -129,7 +129,7 @@ def train_model_with_validation(
             loss = loss_fn(student_outputs, teacher_outputs, labels)
             loss.backward()
             optimizer.step()
-        
+
         val_loss /= len(val_dataloader.dataset)
         print(f"Epoch [{epoch+1}/{num_epochs}], Validation Loss: {val_loss:.4f}")
 
